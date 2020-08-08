@@ -11,9 +11,15 @@ contract ArmaToken is ERC20  {
 
 
     constructor() public ERC20("ArmaToken", "AT") {
+
+        // msg.sender에게 토큰을 할당
         _mint(msg.sender, INITIAL_SUPPLY);
     }
 
+
+    function mint(address account, uint256 amount) public {
+        _mint(account, amount);
+    }
 
 }
 
