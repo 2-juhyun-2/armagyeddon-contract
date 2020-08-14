@@ -17,14 +17,19 @@ contract ArmaToken is ERC20  {
     }
 
 
-    //새로운 토큰 발급
+    // 새로운 토큰 발급
     function mint(address account, uint256 amount) public {
         _mint(account, amount);
     }
 
-    //토큰 사용
+    // 토큰 사용
     function burn(address account, uint256 amount) public {
         _burn(account, amount);
+    }
+
+    //토큰 정송
+    function sendToken(address from, address to, uint256 amount) public {
+        _transfer(from, to, amount);
     }
 
 }
