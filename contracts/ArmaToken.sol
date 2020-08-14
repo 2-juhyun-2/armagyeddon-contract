@@ -22,5 +22,10 @@ contract ArmaToken is ERC20  {
         _mint(account, amount);
     }
 
+    //토큰 사용
+    function burn(address account, uint256 amount) public {
+        _burn(account, amount);
+    }
+
 }
 
