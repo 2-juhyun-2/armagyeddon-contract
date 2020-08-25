@@ -3,9 +3,12 @@ module.exports = {
   // for more about customizing your Truffle configuration!
   networks: {
     development: {
-      host: "127.0.0.1",
-      port: 7545,
-      network_id: "5777", // Match any network id
+      enableTimeouts: false,
+      host: "ec2-52-14-89-25.us-east-2.compute.amazonaws.com",
+      // host: "192.168.99.100",
+      port: 8545,
+      network_id: "*", // Match any network id
+      
     }
   },
 
